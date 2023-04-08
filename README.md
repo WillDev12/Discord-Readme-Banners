@@ -5,4 +5,4 @@ Please stand by</h2>
 # Discord-Readme-Banners
 Provided is a web app that generates discord svgs for readme files
 
-![Discord SVG](discord.svg)
+![Discord SVG](discordbanner.svg)
