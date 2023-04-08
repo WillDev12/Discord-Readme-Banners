@@ -10,15 +10,15 @@ function generatePreview() {
 
   if (document.getElementById('bravery').checked) {
 
-    houseicon = "https://github.com/WillDev12/Discord-Readme-Banner/blob/main/dicsord-bravery.png?raw=true";
+    houseicon = "https://github.com/WillDev12/Discord-Readme-Banners/blob/main/dicsord-bravery.png?raw=true";
 
   } else if (document.getElementById('brilliance').checked) {
 
-    houseicon = "https://github.com/WillDev12/Discord-Readme-Banner/blob/main/discord-brilliance.png?raw=true";
+    houseicon = "https://github.com/WillDev12/Discord-Readme-Banners/blob/main/discord-brilliance.png?raw=true";
 
   } else if (document.getElementById('balance').checked) {
 
-    houseicon = "https://github.com/WillDev12/Discord-Readme-Banner/blob/main/discord-balance.png?raw=true";
+    houseicon = "https://github.com/WillDev12/Discord-Readme-Banners/blob/main/discord-balance.png?raw=true";
 
   }
 
