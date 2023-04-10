@@ -5,4 +5,4 @@ Please stand by<br><br>Project is not fully usable yet until image bug is fixed,
 # Discord-Readme-Banners
 Provided is a web app that generates discord svgs for readme files
 
-![Discord SVG](discordbanner.svg)
+![Discord SVG](discordprofile.svg)
