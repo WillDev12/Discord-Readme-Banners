@@ -31,7 +31,7 @@ To embed a banner, you must first download it or copy the data: link.  Since Git
 If so, go ahead!  I myself am newer to node and javascript so if anyone can help out with keeping this all under the willdev12.github domain please do so.  Any helpers will be mentioned near the bottom of this readme.
 </details>
 
-<h2>Example banner</h2>
+<h2>Example banners</h2>
 
 ![Discord info](discordprofile.svg)<br>
 **please note that these are not valid discord credentials**
