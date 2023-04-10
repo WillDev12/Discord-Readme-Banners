@@ -1,1 +1,2 @@
 
+![Discord SVG](discordprofile.svg)
