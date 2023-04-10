@@ -33,7 +33,7 @@ If so, go ahead!  I myself am newer to node and javascript so if anyone can help
 
 <h2>Example banners</h2>
 
-![Discord info](discordprofile.svg)<br>
+![Discord info](./example/example1.svg) ![Discord info](./example/example2.svg) ![Discord info](./example/example3.svg)<br>
 **please note that these are not valid discord credentials**
 
 <h1>Like content like this?</h1>
