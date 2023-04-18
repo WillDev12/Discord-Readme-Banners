@@ -75,22 +75,16 @@ function generatePreview() {
   document.getElementById('previewBox').innerHTML = html;
 
   var svg = document.getElementById("svg");
+  
+  var svgString = new XMLSerializer().serializeToString(svg);
 
-  var serializer = new XMLSerializer();
-  var source = serializer.serializeToString(svg);
+  var decoded = unescape(encodeURIComponent(svgString));
 
-  if(!source.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)){
-      source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
-  }
-  if(!source.match(/^<svg[^>]+"http\:\/\/www\.w3\.org\/1999\/xlink"/)){
-      source = source.replace(/^<svg/, '<svg xmlns:xlink="http://www.w3.org/1999/xlink"');
-  }
+  var base64 = btoa(decoded);
 
-  source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
+  var imgSource = `data:image/svg+xml;base64,${base64}`;
 
-  var url = "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(source);
-
-  document.getElementById('codebox').textContent =  url;
+  document.getElementById('codebox').textContent =  imgSource;
 
 }
 
