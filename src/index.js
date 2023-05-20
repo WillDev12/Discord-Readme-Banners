@@ -1,27 +1,21 @@
 function generatePreview() {
+    var previewBox = document.getElementById("previewBox");
+    var username = document.getElementById("userName").value;
+    var tag = document.getElementById("tagId").value;
+    var aboutMe = document.getElementById("aboutMe").value;
 
-  var previewBox = document.getElementById('previewBox');
-  var username = document.getElementById('userName').value;
-  var tag = document.getElementById('tagId').value;
-  var aboutMe = document.getElementById('aboutMe').value;
+    var houseicon = "";
 
-  var houseicon = "";
+    if (document.getElementById("bravery").checked) {
+        houseicon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" version="1.1" x="390" y="90"><path d="" stroke="none" fill="#9c84f4" fill-rule="evenodd"/><path d="M 0 6.807 L 0 13.615 4.529 16.807 L 9.058 20 10.027 20 L 10.995 20 15.998 16.406 L 21 12.812 21 6.406 L 21 0 10.500 0 L 0 0 0 6.807 M 5.301 8.892 L 5.631 11.053 7.816 12.583 L 10 14.113 12.184 12.583 L 14.369 11.053 14.699 8.892 L 15.028 6.732 13.264 8.116 L 11.500 9.500 10.750 10.500 L 10 11.500 9.250 10.500 L 8.500 9.500 6.736 8.116 L 4.972 6.732 5.301 8.892" stroke="none" fill="#9c84ec" fill-rule="evenodd"/></svg>`;
+    } else if (document.getElementById("brilliance").checked) {
+        houseicon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" version="1.1" x="390" y="90"><path d="" stroke="none" fill="#f47c6c" fill-rule="evenodd"/><path d="M 2.923 2.923 C -3.653 9.500, 0.895 20, 10.319 20 C 14.188 20, 15.212 19.522, 17.896 16.465 C 22.411 11.324, 22.200 6.466, 17.303 2.750 C 12.240 -1.091, 6.872 -1.026, 2.923 2.923 M 5.658 9.800 C 6.861 14.399, 13.095 14.567, 14.281 10.032 C 14.926 7.567, 14.250 7.464, 11.829 9.655 C 10.127 11.195, 9.873 11.195, 8.171 9.655 C 5.810 7.518, 5.072 7.561, 5.658 9.800" stroke="none" fill="#f47c64" fill-rule="evenodd"/></svg>`;
+    } else if (document.getElementById("balance").checked) {
+        houseicon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" version="1.1" x="390" y="90"><path d="" stroke="none" fill="#44dcbc" fill-rule="evenodd"/><path d="M 4.487 5.013 C -0.450 10.026, -0.450 10.026, 4.764 15.240 C 9.978 20.454, 9.978 20.454, 15.489 15.011 C 20.275 10.284, 22.730 6.813, 20.166 8.398 C 19.707 8.681, 17.363 6.908, 14.957 4.457 C 9.617 -0.985, 10.438 -1.029, 4.487 5.013 M 6 9.411 C 6 13.075, 10.354 15.246, 12.800 12.800 C 15.016 10.584, 14.272 8.444, 12 10.500 C 10.070 12.247, 9.930 12.247, 8 10.500 C 6.900 9.505, 6 9.014, 6 9.411" stroke="none" fill="#44dcc4" fill-rule="evenodd"/></svg>`;
+    }
 
-  if (document.getElementById('bravery').checked) {
-
-    houseicon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" version="1.1" x="390" y="90"><path d="" stroke="none" fill="#9c84f4" fill-rule="evenodd"/><path d="M 0 6.807 L 0 13.615 4.529 16.807 L 9.058 20 10.027 20 L 10.995 20 15.998 16.406 L 21 12.812 21 6.406 L 21 0 10.500 0 L 0 0 0 6.807 M 5.301 8.892 L 5.631 11.053 7.816 12.583 L 10 14.113 12.184 12.583 L 14.369 11.053 14.699 8.892 L 15.028 6.732 13.264 8.116 L 11.500 9.500 10.750 10.500 L 10 11.500 9.250 10.500 L 8.500 9.500 6.736 8.116 L 4.972 6.732 5.301 8.892" stroke="none" fill="#9c84ec" fill-rule="evenodd"/></svg>`;
-
-  } else if (document.getElementById('brilliance').checked) {
-
-    houseicon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" version="1.1" x="390" y="90"><path d="" stroke="none" fill="#f47c6c" fill-rule="evenodd"/><path d="M 2.923 2.923 C -3.653 9.500, 0.895 20, 10.319 20 C 14.188 20, 15.212 19.522, 17.896 16.465 C 22.411 11.324, 22.200 6.466, 17.303 2.750 C 12.240 -1.091, 6.872 -1.026, 2.923 2.923 M 5.658 9.800 C 6.861 14.399, 13.095 14.567, 14.281 10.032 C 14.926 7.567, 14.250 7.464, 11.829 9.655 C 10.127 11.195, 9.873 11.195, 8.171 9.655 C 5.810 7.518, 5.072 7.561, 5.658 9.800" stroke="none" fill="#f47c64" fill-rule="evenodd"/></svg>`;
-
-  } else if (document.getElementById('balance').checked) {
-
-    houseicon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" version="1.1" x="390" y="90"><path d="" stroke="none" fill="#44dcbc" fill-rule="evenodd"/><path d="M 4.487 5.013 C -0.450 10.026, -0.450 10.026, 4.764 15.240 C 9.978 20.454, 9.978 20.454, 15.489 15.011 C 20.275 10.284, 22.730 6.813, 20.166 8.398 C 19.707 8.681, 17.363 6.908, 14.957 4.457 C 9.617 -0.985, 10.438 -1.029, 4.487 5.013 M 6 9.411 C 6 13.075, 10.354 15.246, 12.800 12.800 C 15.016 10.584, 14.272 8.444, 12 10.500 C 10.070 12.247, 9.930 12.247, 8 10.500 C 6.900 9.505, 6 9.014, 6 9.411" stroke="none" fill="#44dcc4" fill-rule="evenodd"/></svg>`;
-
-  }
-
-  var html = `<svg width="442" height="267" viewbox="" id="svg">
+    var html =
+        `<svg width="442" height="267" viewbox="" id="svg">
     
   <path d="M21,1 h400 a20,20 0 0 1 20,20 v225 a20,20 0 0 1 -20,20 h-400 a20,20 0 0 1 -20,-20 v-225 a20,20 0 0 1 20,-20 z" x="0" y="0" style="fill:#232428"/>
                       
@@ -40,11 +34,18 @@ function generatePreview() {
                       
   <path d="M35,118 h370 a15,15 0 0 1 15,15 v95 a15,15 0 0 1 -15,15 h-370 a15,15 0 0 1 -15,-15 v-95 a15,15 0 0 1 15,-15 z" style="fill:#111214"/>
                   
-  <text fill="#F8FBFF" x="35" y="150" style="font-size:20px;font-family: sans-serif;font-weight:500;">` + username + tag +`</text>
+  <text fill="#F8FBFF" x="35" y="150" style="font-size:20px;font-family: sans-serif;font-weight:500;">` +
+        username +
+        tag +
+        `</text>
   <text fill="#F8FBFF" x="35" y="187" style="font-size:14px;font-family: sans-serif;font-weight:600;">ABOUT ME</text>
-  <text fill="#F8FBFF" x="35" y="206" style="font-size:14px;font-family: sans-serif;font-weight:500;">` + aboutMe + `</text>
+  <text fill="#F8FBFF" x="35" y="206" style="font-size:14px;font-family: sans-serif;font-weight:500;">` +
+        aboutMe +
+        `</text>
                     
-  <path d="M390,85 h20 a5,5 0 0 1 5,5 v20 a5,5 0 0 1 -5,5 h-20 a5,5 0 0 1 -5,-5 v-20 a5,5 0 0 1 5,-5 z" style="fill:#111214"/>` + houseicon + `<path d="M35,163 h370 z" stroke="#2E2F34" stroke-width="0.2">
+  <path d="M390,85 h20 a5,5 0 0 1 5,5 v20 a5,5 0 0 1 -5,5 h-20 a5,5 0 0 1 -5,-5 v-20 a5,5 0 0 1 5,-5 z" style="fill:#111214"/>` +
+        houseicon +
+        `<path d="M35,163 h370 z" stroke="#2E2F34" stroke-width="0.2">
                       
       <style>
 
@@ -72,25 +73,23 @@ function generatePreview() {
       
 </svg>`;
 
-  document.getElementById('previewBox').innerHTML = html;
+    document.getElementById("previewBox").innerHTML = html;
 
-  var svg = document.getElementById("svg");
-  
-  var svgString = new XMLSerializer().serializeToString(svg);
+    var svg = document.getElementById("svg");
 
-  var decoded = unescape(encodeURIComponent(svgString));
+    var svgString = new XMLSerializer().serializeToString(svg);
 
-  var base64 = btoa(decoded);
+    var decoded = unescape(encodeURIComponent(svgString));
 
-  var imgSource = `data:image/svg+xml;base64,${base64}`;
+    var base64 = btoa(decoded);
 
-  document.getElementById('codebox').textContent =  imgSource;
+    var imgSource = `data:image/svg+xml;base64,${base64}`;
 
+    document.getElementById("codebox").textContent = imgSource;
 }
 
 function copyResult() {
-
-    var texts = document.getElementById('codebox').textContent;
+    var texts = document.getElementById("codebox").textContent;
     var link = document.createElement("a");
     link.download = "discord.svg";
     link.href = texts;
@@ -98,5 +97,4 @@ function copyResult() {
     link.click();
     document.body.removeChild(link);
     delete link;
-
 }
